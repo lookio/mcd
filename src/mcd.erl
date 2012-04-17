@@ -490,7 +490,7 @@ do_forwarder(Method, ServerRef, Req) ->
 %% Convert arbitrary Erlang term into memcached key
 %% @spec md5(term()) -> binary()
 %% @spec b64(binary()) -> binary()
-md5(Key) -> erlang:md5(term_to_binary(Key)).
+md5(Key) -> erlang:md5(Key).
 b64(Key) -> base64:encode(Key).
 
 %% Translate a query tuple into memcached protocol string and the
